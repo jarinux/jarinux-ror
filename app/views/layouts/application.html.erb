@@ -19,7 +19,8 @@
           <li>
           <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
           </li>
-          <% if current_user.is_admin? %>
+
+          <% if current_user.is_admin %>
             <%= link_to('Espace admin', site_admin_path) %>            
           <% end %>
         <% else %>
